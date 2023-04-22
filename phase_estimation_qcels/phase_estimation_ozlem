@@ -1,0 +1,12 @@
+import json
+with open("h2_hamiltonian.json", "r") as file_io:
+   data = json.load(file_io)
+
+from pytket.utils.operators import QubitPauliOperator
+operator = QubitPauliOperator.from_list(data)
+operator_matrıx = operator.to_sparse_matrix().todense()
+operator_matrıx
+
+
+
+
